@@ -9,7 +9,7 @@ router.post("/login", userController.userLogin);
 
 router.get("/list", checkAuth, userController.listUsers);
 
-router.get("/search", userController.searchUsers);
+router.get("/search", checkAuth, userController.searchUsers);
 
 router.put('/update/:id',checkAuth, userController.updateUser);
 
